@@ -23,7 +23,7 @@ public class FireBallScript : MonoBehaviour
     void Start()
     {
 
-        //übernimmt den Angle basierend auf movement von Mage
+        //Ã¼bernimmt den Angle basierend auf movement von Mage
         //TODO: richtige Richtung auch im stehen
         
         angle = Vector3.Angle(direction, Vector3.right);
@@ -43,14 +43,14 @@ public class FireBallScript : MonoBehaviour
 
         if (!IsVisibleOnScreen(gameObject))
         {
-            Destroy(gameObject);        //zerstörug des Balle
+            Destroy(gameObject);        //zerstÃ¶rug des Balle
 
-            //nach 3 Sekunden Obkekt zerstören
+            //nach 3 Sekunden Obkekt zerstÃ¶ren
             //Destroy(GameObject, 3);
         }
 
 
-        //Methode zur überprüfung der Fire Ball Position
+        //Methode zur Ã¼berprÃ¼fung der Fire Ball Position
         bool IsVisibleOnScreen(GameObject target)
         {
 
@@ -58,7 +58,7 @@ public class FireBallScript : MonoBehaviour
             Vector3 targetScreenPoint = mainCam.WorldToScreenPoint(target.GetComponent<Renderer>().bounds.center);
 
             if ((targetScreenPoint.x < 0) || (targetScreenPoint.x > Screen.width) ||
-                (targetScreenPoint.y < 0) || (targetScreenPoint.y > Screen.height))     //ist Ball außerhalb der Cam View?
+                (targetScreenPoint.y < 0) || (targetScreenPoint.y > Screen.height))     //ist Ball auÃŸerhalb der Cam View?
             {
                 return false;
             }
@@ -68,7 +68,7 @@ public class FireBallScript : MonoBehaviour
             }
             return true;
 
-            /* Version 2 für Ball zerstörung
+            /* Version 2 fÃ¼r Ball zerstÃ¶rung
              * 
              * float timer
              * timer = timer * Time.deltaTime;
